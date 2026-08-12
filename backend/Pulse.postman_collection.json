@@ -1,0 +1,26 @@
+{
+  "info": {
+    "name": "Pulse Dashboard API",
+    "description": "Aggregation endpoints for the Week 4 Task B internship submission.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:5000" }],
+  "item": [
+    {
+      "name": "Health check",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/health" }
+    },
+    {
+      "name": "Dashboard - last 7 days",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/dashboard?range=7" }
+    },
+    {
+      "name": "Dashboard - last 30 days",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/dashboard?range=30" }
+    },
+    {
+      "name": "Dashboard - last 90 days",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/dashboard?range=90" }
+    }
+  ]
+}
